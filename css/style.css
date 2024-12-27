@@ -1,0 +1,425 @@
+/* ------- Configuraciones generales ------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+*:before,*:after{
+    box-sizing: content-box;
+}
+
+body {
+    font-family: Helvetica, Georgia, 'Times New Roman', sans-serif;
+    text-transform:capitalize;
+}
+
+h1{
+    margin: 20px 0;   
+    font-size: 50px; 
+}
+
+h2 {
+    color: #000080;
+    margin: 20px; 
+    display: flex;
+    justify-content: center;   
+    font-size: 40px;
+}
+
+h3 {
+    color: rgb(15, 10, 85);
+    margin: 10px;
+}
+
+a {
+    color:#cfd8dc
+}
+
+/* ------- Header ------- */
+
+header {
+    display: flex;
+    background: rgb(0, 0, 153);
+}
+
+.header_logo {  
+    width: 150px;
+    height: 150px;
+}
+
+#nombre {
+    color: #cfd8dc;
+    margin-top: 10px;
+    font-size: 65px;
+    display: flex;
+    text-shadow: 2px 1px 3px black; 
+    align-items: center;
+    font-family: "DM Serif Text", serif;
+}
+
+/* ------- Barra de navegación ------- */
+
+.nav {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 15px;
+}
+
+.boton {
+    color: white;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 10px;
+    background: rgb(4, 148, 158);
+    font-size: 25px;
+    border-radius: 30px 10px;
+    text-decoration: none;
+}
+    
+.boton:after, .boton:before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+}
+
+/* ------- Productos ------- */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-flow: wrap;
+    margin: 20px;
+}
+
+.card, .contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+}
+
+.card {
+    align-items: center;
+    width: 300px;
+    padding: 30px;
+    margin: 10px;
+    border: 1px solid rgb(6, 10, 233);
+    border-radius: 10px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: all 300ms ease-out;
+    will-change: transform; 
+}
+
+.box_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.image_product {
+    width: 250px;    
+    object-fit: contain;
+    align-items: center; 
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+/* ------- Pie de página ------- */
+
+.pie-pagina {
+    margin: 0;
+    background: #100db9a1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.grupo-1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.box{
+    padding: 10px;
+}
+
+.box h4{
+    font-size: 25px;
+    color: #020224;
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgb(4, 0, 8);
+    display: inline-block;
+    margin: 15px 15px 15px 0px;  
+}
+
+.box li{
+    margin: 10px 10px 10px 0px;
+}
+
+.box a{
+    color: #020224;
+}
+.redes__a{
+    font-size: 1.7rem;
+    padding-right: 1rem;
+}
+.redes__a .fa-brands.fa-twitter{
+    color:  #00acee;
+    border-radius: 0.5rem;
+}
+
+.redes__a .fa-brands.fa-facebook-square{
+    color:  #0b3ead;
+}
+
+.redes__a .fa-brands.fa-instagram{
+    color: rgb(241, 238, 238);  
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    border-radius: 0.5rem;
+    padding-top: 0.1rem;
+    padding-left: 0.2rem;
+    padding-right: 0.225rem;
+}
+
+.grupo-2{
+    padding: 10px;
+}
+
+#red-social{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    bottom: 50px;
+    right: 50px;
+    width: 80px;
+    height: 80px;
+    font-size: 65px;
+    border: solid;
+    color: #020224;
+    border-width: 1px;
+    background-color: hsl(128, 92%, 47%);
+    border-radius: 50%;
+    z-index: 3;
+}
+
+#red-social a{
+    font-size: 65px;
+    transition: all ease 400ms;
+    border-radius: 50%;
+    
+}
+
+
+.whatsapp{
+    color: white;
+    text-align: center;
+    position: left;
+    z-index: 3; 
+}
+
+#red-social a:hover{
+    width: 75px;
+    height: 75px;
+    border: solid;
+    color: green;
+    background-color: hsl(128, 92%, 47%);
+    border-width: 1px;
+    border-radius: 50%;
+    justify-content: center;
+    transform: scale(1.2);
+}
+
+/* ------- Formulario ------- */
+
+.container-form-1{
+    display: grid;
+    margin: auto;
+    
+}
+
+.container-form{
+    width: 100%;
+    max-width: 1200px;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 40px; 
+    margin-top: 50px;
+    display: grid;
+    margin: auto;
+}
+
+.container-form p{
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.container-form a{
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 700;
+    
+}
+
+.container-form form textarea{
+    width: 100%;
+    max-width: 530px;
+    min-width: 530px;
+    min-height: 140px;
+    max-height: 150px;
+    padding: 15px;
+    font-size: 15px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+ 
+.campo{
+    width: auto;
+    font-size: 15px;
+    padding: 10px 15px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.no-arrow {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+.no-arrow::-webkit-inner-spin-button {
+    display: none;
+}
+.no-arrow::-webkit-outer-spin-button,
+.no-arrow::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.container-form .btn-enviar{
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    outline: 0px;
+    background: #0951d6;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 300ms ease;
+
+}
+
+.container-form .btn-enviar:hover{
+    background: #000080;
+}
+
+
+.contacto-1 i{
+    color: blue;
+    margin: 5px;
+} 
+
+.contacto-1{
+    margin-left: 150px;  
+}
+
+.titulos{
+    font-size: 30px;
+}
+
+.info-form{
+    display: flex;
+}
+
+.mapa{
+    text-align: center;
+    display: center;
+    justify-content: center;
+}
+
+.gps{
+    margin: 40px;
+}
+
+
+
+/* ------ Media Queries para hacer responsive la pagina ------- */
+
+@media screen and (max-width:1025px) {    
+    h2 {
+        font-size: 30px;
+    }
+    .header_logo {  
+        width: 80px;
+        height: 80px;
+    }
+    #nombre{
+        font-size: 50px;
+    }
+   
+    .boton{
+        font-size: 15px;
+    }
+    #red-social{
+        bottom: 20px;
+        right: 20px;
+    }    
+    
+}
+
+@media screen and (max-width:750px) {
+    h2 {
+        font-size: 25px;
+    }
+    .header_logo {  
+        width: 65px;
+        height: 65px;
+    }
+    #nombre{
+        font-size: 40px;
+    }
+    .boton{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:695px) {
+    .card{
+        width: 280px;
+    }
+    #nombre{
+        font-size: 35px;
+    }
+    #red-social{
+        bottom: 10px;
+        right: 10px;
+    }  
+    .container-form{
+
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
